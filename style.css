@@ -1,13 +1,18 @@
 @font-face {
-    font-family: fantasy;
-    src: url(./Heading-Now-Variable.ttf);
+    font-family: hn;
+    src: url(./Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: hn1;
+    src: url(./Gilroy-Regular.ttf);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: fantasy;
+    font-family: hn1;
     color: white;
 }
 
@@ -15,7 +20,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-family: fantasy;
 }
 
 #cursor {
@@ -92,7 +96,8 @@ video {
 }
 
 #page1 h1 {
-    font-size: 120px;
+    font-family: hn;
+    font-size: 140px;
     font-weight: 900;
     position: relative;
 }
@@ -101,6 +106,7 @@ video {
 /* pseudo code of css */
 
 #page1 h1::before {
+    font-family: hn;
     content: "EAT.DRINK.PLAY";
     position: absolute;
     color: black;
@@ -154,8 +160,9 @@ video {
 }
 
 .scroller-in h4 {
+    font-family: hn;
     display: inline-block;
-    font-size: 140px;
+    font-size: 160px;
     font-weight: 900;
     transition: all linear 0.4s;
     -webkit-text-stroke: 2px #b8ef21;
