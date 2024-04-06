@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #b8ef21;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99;
+    border-radius: 50%;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: #b8ef214e;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 9;
+}
+
+#nav {
+    width: 100vw;
+    height: 130px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0px 110px;
+    gap: 3vw;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+}
+
+#nav img {
+    height: 4.5vw;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+}
+
+
+/* pseudo code of css */
+
+#page1 h1::before {
+    content: "EAT.DRINK.PLAY";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #b8ef21;
+    z-index: -1;
+}
+
+#page1 h4 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#page1 p {
+    text-align: center;
+    font-size: 15px;
+    align-content: center;
+    font-weight: 300;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    text-transform: uppercase;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in h4 {
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900;
+    transition: all linear 0.4s;
+    -webkit-text-stroke: 2px #b8ef21;
+    color: transparent;
+    margin-right: 10px;
+}
+
+.scroller-in h4:hover {
+    color: #b8ef21;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
